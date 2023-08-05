@@ -6,7 +6,6 @@ const bangsound = new Audio("./media/bang.mp3");
 const movesound = new Audio("./media/move.mp3");
 
 let gamesetting = JSON.parse(localStorage.getItem("settingdata"));
-
 console.log("this is game data..", gamesetting);
 
 // main logic starts here
@@ -116,6 +115,7 @@ function gameEngine() {
     if (index === 0) {
       snakeElement.classList.add("snakeHead");
       snakeElement.style.backgroundImage = gamesetting.playerimg;
+      console.log("img is updated : ");
     } else {
       snakeElement.classList.add("snakeBody");
     }
@@ -128,7 +128,9 @@ function gameEngine() {
   foodElement.style.gridRowStart = food.y;
   foodElement.style.gridColumnStart = food.x;
   foodElement.classList.add("food");
+  // foodElement.style.backgroundImage = gamesetting.opponentimg;
   foodElement.style.backgroundImage = gamesetting.opponentimg;
+  console.log(" updated !! : ");
   board.appendChild(foodElement);
 }
 

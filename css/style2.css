@@ -47,24 +47,28 @@ video {
 }
 
 /* Index page Media Query */
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   video {
     margin-left: -106%;
   }
 
   .info {
-    padding: 0 10px;
+    padding: 25px 74px;
     height: 22%;
-    width: 96%;
-    left: 2%;
+    width: 95%;
+    left: 8%;
     top: 39%;
   }
 
   .info .btn {
-    height: 62px;
-    width: 190px;
-    line-height: 45px;
-    margin-top: 20px;
-    font-size: 30px;
+    height: 59px;
+    width: 186px;
+    line-height: 43px;
+    margin-top: 30px;
+    font-size: 23px;
+  }
+  body .container {
+    height: 105vh;
+    width: 104vw;
   }
 }

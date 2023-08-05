@@ -1,10 +1,12 @@
+// initialize
 let inputDir = { x: 0, y: 0 };
-const musicsound = new Audio("./media/music.mp3");
+const musicsound = new Audio("./media/music1.mp3");
 const eatsound = new Audio("./media/eat.mp3");
 const gameoversound = new Audio("./media/gameover.mp3");
 const bangsound = new Audio("./media/bang.mp3");
 const movesound = new Audio("./media/move.mp3");
 
+// local storage saved settings
 let gamesetting = JSON.parse(localStorage.getItem("settingdata"));
 console.log("this is game data..", gamesetting);
 
@@ -16,13 +18,15 @@ let lastpainttime = 0;
 let snakearr = [{ x: 11, y: 13 }];
 let food = { x: 12, y: 7 };
 
-musicsound.play();
+musicsound.play(); // background music
+
+//make hiscore  = 0 if dont have previous game data
 let hiscore = localStorage.getItem("hiscore");
 if (hiscore === null) {
-  hiscoreval = 0;
-  localStorage.setItem("hiscore", JSON.stringify(hiscoreval));
+  hiscore = 0;
+  localStorage.setItem("hiscore", JSON.stringify(hiscore));
 } else {
-  hiscoreval = JSON.parse(hiscore);
+  hiscore = JSON.parse(hiscore);
   hiscoreBox.innerHTML = "HiScore: " + hiscore;
 }
 
@@ -61,11 +65,11 @@ function gameEngine() {
   // updating snake arr and food
   if (isColide(snakearr)) {
     inputDir = { x: 0, y: 0 };
-    setTimeout(function () {
-      alert(
-        `Game Over ,Score is: ${score} and Hiscore is: ${hiscore} , Press any key to play again!`
-      );
-    }, 100); // Delay the alert prompt by 100 milliseconds
+    // setTimeout(function () {
+    alert(
+      `Game Over ,Score is: ${score} and Hiscore is: ${hiscore} , Press any key to play again!`
+    );
+    // }); // Delay the alert prompt by 100 milliseconds
     snakearr = [{ x: 13, y: 14 }];
     musicsound.play();
     score = 0;
@@ -74,12 +78,13 @@ function gameEngine() {
   if (snakearr[0].y === food.y && snakearr[0].x === food.x) {
     eatsound.play();
     score += 1;
-    if (score > hiscoreval) {
-      hiscoreval = score;
-      localStorage.setItem("hiscore", JSON.stringify(hiscoreval));
+    if (score > hiscore) {
+      hiscore = score;
+      localStorage.setItem("hiscore", JSON.stringify(hiscore));
 
-      hiscoreBox.innerHTML = "HiScore: " + hiscoreval;
+      hiscoreBox.innerHTML = "HiScore: " + hiscore;
     }
+    let scoreBox = document.getElementById("scoreBox");
     scoreBox.innerHTML = "Score: " + score;
     //adding body segment
     snakearr.unshift({

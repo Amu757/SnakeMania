@@ -83,10 +83,11 @@
 
 .btn {
   display: none;
+  cursor: pointer;
 }
 
 /* Media Queryies */
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   .container video {
     height: 100vh;
   }
@@ -98,12 +99,15 @@
     top: 86%;
     left: 5%;
     width: 20vw;
+    cursor: pointer;
   }
 
   #scoreBox {
     top: 93%;
     left: 5%;
-    width: 20vw;
+    width: 25vw;
+    margin-top: 10px;
+    cursor: pointer;
   }
 
   #board {

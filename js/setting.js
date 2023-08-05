@@ -3,8 +3,8 @@ const slectsound = new Audio("./media/click.mp3");
 // initialization of elemets
 let settingdata = {
   speed: 4,
-  playerimg: 'url("../SnakeMania/media/ishin.jpg")',
-  opponentimg: 'url("../SnakeMania/media/srushti.jpg")',
+  playerimg: 'url("../media/ishin.jpg")',
+  opponentimg: 'url("../media/srushti.jpg")',
 };
 
 // option selection

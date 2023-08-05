@@ -50,11 +50,11 @@ video {
 /* Index page Media Query */
 @media (max-width: 400px) {
   video {
-    margin-left: -120%;
+    margin-left: -140%;
   }
 
   .info {
-    padding: 25px 74px;
+    padding: 25px 50px;
     height: 22%;
     width: 95%;
     left: 8%;

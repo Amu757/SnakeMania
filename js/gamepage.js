@@ -55,6 +55,7 @@ function isColide(snake) {
     snake[0].y >= 15 ||
     snake[0].y <= 0
   ) {
+    musicsound.pause();
     bangsound.play();
     gameoversound.play();
     return true;
@@ -65,11 +66,9 @@ function gameEngine() {
   // updating snake arr and food
   if (isColide(snakearr)) {
     inputDir = { x: 0, y: 0 };
-    // setTimeout(function () {
     alert(
       `Game Over ,Score is: ${score} and Hiscore is: ${hiscore} , Press any key to play again!`
     );
-    // }); // Delay the alert prompt by 100 milliseconds
     snakearr = [{ x: 13, y: 14 }];
     musicsound.play();
     score = 0;

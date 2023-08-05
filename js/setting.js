@@ -20,15 +20,15 @@ function selectPlayer(num, obj) {
   switch (num) {
     case 0:
       settingdata.playerimg = 'url("../media/ishin.jpg")';
-      //   snakehead[0].style.backgroundImage = "";
       break;
     case 1:
       settingdata.playerimg = 'url("../media/arhunt.jpg")';
-      //   snakehead[0].style.backgroundImage = ";
       break;
     case 2:
       settingdata.playerimg = 'url("../media/aman.jpg")';
-      // snakehead[0].style.backgroundImage = playerimg;
+      break;
+    case 3:
+      settingdata.playerimg = 'url("../media/shubham.jpg")';
       break;
   }
 }
@@ -61,18 +61,23 @@ function selectOpponent(num, obj) {
     button.classList.remove("selected");
   });
   obj.classList.add("selected");
-
+  console.log(obj);
   // update settingdata object value
   switch (num) {
     case 0:
-      console.log("clicked strushti");
       settingdata.opponentimg = 'url("../media/srushti.jpg")';
-      //   fooditem[0].style.backgroundImage = "url('../media/srushti.jpg');";
       break;
     case 1:
-      console.log("devil clicked");
+      settingdata.opponentimg = 'url("../media/reena.jpg")';
+      break;
+    case 2:
+      settingdata.opponentimg = 'url("../media/pallavi.jpg")';
+      break;
+    case 3:
+      settingdata.opponentimg = 'url("../media/rachana.jpg")';
+      break;
+    case 4:
       settingdata.opponentimg = 'url("../media/devil.jpg")';
-      //   fooditem[0].style.backgroundImage = "url('../media/devil.jpg');";
       break;
   }
 }

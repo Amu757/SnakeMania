@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Board page */
+.body {
+  /* color: white; */
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  align-items: end;
+  padding-bottom: 1%;
+  padding-left: 2%;
+  box-sizing: border-box;
+}
+
+#board {
+  display: grid;
+  height: 98%;
+  width: 70%;
+  border: 2px solid white;
+  grid-template-rows: repeat(15, 1fr);
+  grid-template-columns: repeat(15, 1fr);
+}
+
+#img {
+  height: 78%;
+  width: 30%;
+  background-image: url("../media/sideimage.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+/* snake elements */
+.snakeHead {
+  height: 130%;
+  width: 130%;
+  /* overflow: hidden; */
+  background-image: url("../media/ishin.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.snakeBody {
+  background-color: rgb(20, 102, 4);
+  filter: drop-shadow(2px 3px 5px white);
+  border-radius: 20%;
+}
+
+/* food styling */
+.food {
+  height: 130%;
+  width: 130%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../media/srushtinew.png");
+}
+
+/*  */
+#hiscoreBox {
+  height: 5vh;
+  width: 15vw;
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  font-size: 25px;
+  color: white;
+}
+
+#scoreBox {
+  height: 5vh;
+  width: 15vw;
+  position: absolute;
+  top: 13%;
+  left: 5%;
+  font-size: 25px;
+  color: white;
+}
+
+.btn {
+  display: none;
+}
+
+/* Media Queryies */
+@media (max-width: 600px) {
+  .container video {
+    height: 100vh;
+  }
+  #img {
+    display: none;
+  }
+
+  #hiscoreBox {
+    top: 86%;
+    left: 5%;
+    width: 20vw;
+  }
+
+  #scoreBox {
+    top: 93%;
+    left: 5%;
+    width: 20vw;
+  }
+
+  #board {
+    height: 85%;
+    width: 99%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5%;
+    width: 15%;
+    background-color: white;
+    color: black;
+    position: absolute;
+    font-size: 40px;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+
+  #btn1 {
+    bottom: 9%;
+    right: 19%;
+  }
+
+  #btn2 {
+    bottom: 5%;
+    right: 4%;
+  }
+
+  #btn3 {
+    bottom: 2%;
+    right: 19%;
+  }
+
+  #btn4 {
+    bottom: 5%;
+    right: 34%;
+  }
+}

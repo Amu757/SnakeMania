@@ -1,0 +1,70 @@
+/* Index page css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body .container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  color: white;
+}
+
+video {
+  height: 100%;
+}
+
+.info .btn {
+  height: 25px;
+  width: 90px;
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 20%;
+  text-align: center;
+  line-height: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.info p {
+  font-size: 25px;
+}
+
+.info {
+  height: 24%;
+  width: 28%;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  top: 38%;
+  left: 31%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Index page Media Query */
+@media (max-width: 600px) {
+  video {
+    margin-left: -106%;
+  }
+
+  .info {
+    padding: 0 10px;
+    height: 22%;
+    width: 96%;
+    left: 2%;
+    top: 39%;
+  }
+
+  .info .btn {
+    height: 62px;
+    width: 190px;
+    line-height: 45px;
+    margin-top: 20px;
+    font-size: 30px;
+  }
+}

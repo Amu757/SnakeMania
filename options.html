@@ -1,0 +1,157 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Setting </title>
+    <!-- <link rel="stylesheet" href="./css/style2.css"> -->
+    <link rel="icon"
+        href="https://cdn5.vectorstock.com/i/1000x1000/01/19/snake-logo-template-viper-symbol-or-icon-vector-7190119.jpg"
+        type="image/x-icon">
+    <style>
+        /* options page css */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .optionwindow {
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(176, 247, 223);
+            z-index: 101;
+            position: absolute;
+        }
+
+        .window {
+            height: 100vh;
+            width: 100vw;
+            padding-top: 40px;
+            background-color: rgb(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .window h2 {
+            text-align: center;
+            height: 8%;
+        }
+
+        .window .container {
+            width: 80%;
+            height: 7%;
+            display: flex;
+            justify-content: center;
+            column-gap: 2%;
+            margin-bottom: 4%;
+            cursor: pointer;
+        }
+
+        .btn {
+            height: 100%;
+            width: 8%;
+            background-color: black;
+            border-radius: 20px;
+            color: #fff;
+            padding: 2px 5px;
+            font-size: 20px;
+        }
+
+        .btn:hover {
+            filter: drop-shadow(5px 5px 10px white);
+        }
+
+        .sbtn {
+            height: 100%;
+            width: 17%;
+            margin-top: 40px;
+            font-size: 30px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            text-decoration: none;
+            color: white;
+            transition: 1s;
+        }
+
+        .sbtn:hover {
+            filter: drop-shadow(5px 5px 10px white);
+        }
+
+        .selected {
+            filter: drop-shadow(1px 5px 10px white);
+        }
+
+        @media (max-width: 600px) {
+
+            /*options page css   */
+            .window {
+                padding-top: 65px;
+            }
+
+            .window h2 {
+                font-size: 28px;
+                height: 5%;
+            }
+
+            .window .container {
+                width: 100%;
+                margin-bottom: 80px;
+            }
+
+            .btn {
+                height: 78%;
+                width: 27%;
+                padding: 10px 20px;
+                font-size: 32px;
+                box-sizing: border-box;
+                text-align: center;
+                line-height: 32px;
+                margin-left: 15px;
+            }
+
+            .sbtn {
+                width: 50%;
+                font-size: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="optionwindow">
+        <form class="window">
+            <h2>Select Player</h2>
+            <div class="container player">
+                <div class="btn selected" onclick="selectPlayer(0,this)">Ishin</div>
+                <div class="btn" onclick="selectPlayer(1,this)">Arhant</div>
+                <div class="btn" onclick="selectPlayer(2,this)">Aman</div>
+            </div>
+
+
+            <h2>Select Level</h2>
+            <div class="container level">
+                <div class="btn selected" onclick="selectLevel(0,this)">Easy</div>
+                <div class="btn" onclick="selectLevel(1,this)">Medium</div>
+                <div class="btn" onclick="selectLevel(2,this)">Hard</div>
+            </div>
+
+
+            <h2>Select Opponent</h2>
+            <div class="container opponent">
+                <div class="btn selected" onclick="selectOpponent(0,this)">Srushti</div>
+                <div class="btn" onclick="selectOpponent(1,this)">CPU</div>
+            </div>
+            <div class="container">
+                <a class="sbtn" id="submitbtn" onclick="changewindow()">Start Game</a>
+                <!-- <a class="sbtn" id="submitbtn" onclick="startthegame(), changewindow()">Start Game</a> -->
+            </div>
+        </form>
+    </div>
+    <script src="./js/setting.js"></script>
+</body>
+
+</html>

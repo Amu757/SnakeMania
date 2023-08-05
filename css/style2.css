@@ -49,7 +49,7 @@ video {
 /* Index page Media Query */
 @media (max-width: 400px) {
   video {
-    margin-left: -106%;
+    margin-left: -120%;
   }
 
   .info {

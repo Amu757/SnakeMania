@@ -1,10 +1,10 @@
 // initialize
 let inputDir = { x: 0, y: 0 };
-const musicsound = new Audio("./media/music1.mp3");
-const eatsound = new Audio("./media/eat.mp3");
-const gameoversound = new Audio("./media/gameover.mp3");
-const bangsound = new Audio("./media/bang.mp3");
-const movesound = new Audio("./media/move.mp3");
+const musicsound = new Audio("../media/music1.mp3");
+const eatsound = new Audio("../media/eat.mp3");
+const gameoversound = new Audio("../media/gameover.mp3");
+const bangsound = new Audio("../media/bang.mp3");
+const movesound = new Audio("../media/move.mp3");
 
 // local storage saved settings
 let gamesetting = JSON.parse(localStorage.getItem("settingdata"));
